@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% for org in organizations %}
+<div>
+    <h2>{{ org.name }}</h2>
+    <p>{{ org.description }}</p>
+    <a href="{% url 'donate' org.id %}">Donate</a>
+</div>
+{% endfor %}
+{% endblock content %}
